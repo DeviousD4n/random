@@ -10,11 +10,11 @@ Once Greasemonkey is installed:
     Choose “New User Script…”.
     Copy and paste the below code:
 
- 
+
 ```js
 // ==UserScript==
 // @name         Ebay Australia Default Location
-// @namespace    ebayausdeflocation
+// @namespace    ebayausdefloc
 // @version      0.1
 // @description  Sets the default location to Australia on ebay.com.au
 // @author       DeviousD4n
