@@ -27,19 +27,14 @@ Once Greasemonkey is installed:
     window.addEventListener('load', function() {
         var button = document.getElementById('gh-btn');
         if (button) {
-            button.addEventListener('click', function(event) {
-                var form = document.getElementById('gh-f');
-                var field = document.getElementById('ausDefault');
-                if (!field) {
-                    field = document.createElement('input');
-                    field.type = 'hidden';
-                    field.id = 'ausDefault';
-                    field.name = 'LH_PrefLoc';
-                    form.appendChild(field);
-                }
-                field.value = '1'; 
-            });
-        } 
+            var form = document.getElementById('gh-f');
+            var field = document.getElementById('ausDefault') || document.createElement('input');
+            field.type = 'hidden';
+            field.id = 'ausDefault';
+            field.name = 'LH_PrefLoc';
+            field.value = '1';
+            if (!document.getElementById('ausDefault')) form.appendChild(field);
+        }
     });
 })();
 ```
