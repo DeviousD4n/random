@@ -29,11 +29,11 @@ Once Greasemonkey is installed:
         if (button) {
             button.addEventListener('click', function(event) {
                 var form = document.getElementById('gh-f');
-                var field = document.getElementById('myField');
+                var field = document.getElementById('ausDefault');
                 if (!field) {
                     field = document.createElement('input');
                     field.type = 'hidden';
-                    field.id = 'myField';
+                    field.id = 'ausDefault';
                     field.name = 'LH_PrefLoc';
                     form.appendChild(field);
                 }
