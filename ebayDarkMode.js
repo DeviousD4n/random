@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        eBay Dark Mode
-// @namespace   ebay-dark
+// @namespace   ebay-dark-mode
 // @include     *://*.ebay.*/*
 // @run-at      document-start
 // @grant       none
@@ -17,15 +17,14 @@ img, picture, video, canvas, .gh-logo {
 }
 
 html, body,
-#mainContent,
-.seo-breadcrumbs-container,
-.vim,
-.tabs__content,
 .srp-river,
-.srp-river-main,
-.srp-results,
-srp-river-main {
+#mainContent {
     background-color: rgb(235,235,235) !important;
 }
-`;
+
+.vim,
+.ux-navigator__container,
+.seo-interlink {
+    background: transparent !important;
+}`;
 document.documentElement.appendChild(style);
